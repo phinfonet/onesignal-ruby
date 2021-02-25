@@ -47,6 +47,10 @@ module OneSignal
         last_active_since: last_active_since&.to_i&.to_s, 
         segment_name: segment_name
     end
+    
+    def add_player(device_type, identifier)
+      post 'players', device_type: device_type, identifier: identifier
+    end
 
     private
 
