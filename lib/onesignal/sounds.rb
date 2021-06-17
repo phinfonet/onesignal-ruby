@@ -17,6 +17,7 @@ module OneSignal
       {
         'ios_sound'     => @ios.as_json(options),
         'android_sound' => @android.as_json(options),
+        'android_channel_id', => @android.as_json(options),
         'adm_sound'     => @amazon.as_json(options),
         'wp_wns_sound'  => @windows.as_json(options)
       }
